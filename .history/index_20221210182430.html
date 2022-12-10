@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Emilia Iwu">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/fd9c36575f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Quizza</title>
+</head>
+<body>
+    <section class="section hidde quiz_section">
+        <article class="start-quiz">
+            <h2>How much do you know about your body?</h2>
+            <p>Text your knowledge</p>
+            <img src="img/1x/bkg2Mesa de trabajo 1.png" alt="" width="100%">
+            <button class="welcomeBtn">Play Now</button>
+        </article>
+        
+        <article class=" quiz-game container hidden">
+            <div class="timers">
+                <div class="time-line"></div>
+                <p class="time">60:00</p>
+            </div>
+            <div class="quiz__header">
+                <div class="circle">
+                    <div class="inner-circle"></div>
+                    <p class="number">10</p>
+                    <svg
+                        version="1.1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 120 120">
+                        <defs>
+                            <linearGradient id="myGradient" gradientTransform="rotate(90)">
+                            <stop offset="22%" stop-color="#1906f8" />
+                            <stop offset="74%" stop-color="#e852ff" />
+                            <stop offset="100%" stop-color="#ffeb0d" />
+                            </linearGradient>
+                        </defs>
+
+                        <!-- using my linear gradient -->
+                        <circle id="circle" cx="60" cy="60" r="50" stroke-linecap="round" stroke="url('#myGradient')" fill="none"/>
+                    </svg>
+                </div>
+                <h2 class="" id="question">Question here</h2>
+            </div>
+            <div class="quiz__body">
+                <ul>
+                    <li class="list">
+                        <input type="radio" name="answer" id="a" class="answer">
+                        <span class="radio"></span>
+                        <label for="a" id="a-text">Question</label>
+                    </li>
+                    <li class="list">
+                        <input type="radio" name="answer" id="b" class="answer">
+                        <span class="radio"></span>
+                        <label for="b" id="b-text">Question</label>
+                    </li>
+                    <li class="list"> 
+                        <input type="radio" name="answer" id="c" class="answer">
+                        <span class="radio"></span>
+                        <label for="c" id="c-text">Question</label>
+                    </li>
+                    <li class="list">  
+                        <input type="radio" name="answer" id="d" class="answer">
+                        <span class="radio"></span>
+                        <label for="d" id="d-text">Question</label>
+                    </li>
+                </ul>
+            </div>
+            
+        </article>
+        <button class="hidden" id="nextBtn">Play Now</button>
+    </section> 
+
+    <section class="section hidden  result_section">
+        <div class="container">
+            <div><i class="fa-solid reset fa-rotate-right"></i></div>
+            <h2 class="gameOver">You</h2>
+            <div class="circle2">
+                <p class="score">100%</p>
+                </p>
+                <div class="inner-circle2"></div>
+            </div>
+            <div class="totalPlayedandWon">
+                <div class="totalPlayed">
+                    <p class="quizPlayed">
+                        10 
+                    </p><span>/10</span>
+                    <p id="played">Quiz Played</p>
+                </div>
+                <div class="totalWon">
+                     <p class="quizWon">
+                        10
+                    </p><span>/10</span>
+                    <p id="won">Quiz Won</p>
+                </div>
+            </div>
+        </div>     
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
